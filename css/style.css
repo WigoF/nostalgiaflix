@@ -15,6 +15,7 @@ body{
     background: var(--preto);
     font-family: 'Martel Sans', sans-serif;
     color:white;
+    overflow-x: hidden;
 }
 
 /*menu*/
@@ -54,15 +55,14 @@ header nav a:hover{
 /*filme principal*/
 
 .serie-principal{
-    height: 98vh;
-    width: 100vw;
+    min-height: 500px;
+    width: 100%;    
     background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/imgfixa.png');
     background-size: cover;
-    padding-left: 15px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+    padding: 15px;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 .titulo-principal{
@@ -78,7 +78,7 @@ header nav a:hover{
 }
 
 .botao{
-    margin:5px;
+    margin:5px 0;
     font-size: 23px;
     background-color:rgba(0,0,0,.50);
     border:none;
@@ -95,5 +95,41 @@ header nav a:hover{
 .botao:hover{
     background-color: white;
     color:var(--preto)
+}
+
+/*vitrine*/
+
+section.vitrine .vitrine-flex{
+	width: 96%;
+	margin-left: 4%;
+	position: relative;
+    z-index: 4;
+}
+
+.vitrine-single-banner{
+	width: 100%;
+	padding-top: calc(16.6% / 2);
+	float: left;
+	position: relative;
+}
+
+.vitrine-wraper{
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.vitrine-single-banner:hover{
+    transform:scale(1.2,1.2);
+    transition:1s;
+}
+
+@media screen and (max-width:768px){
+   .menu{display: none;}
 }
 

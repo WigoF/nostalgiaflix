@@ -12,11 +12,13 @@
             <header>
                 <div class="container">
                     <a href="#"><img src="img/nostalgiaflix .png"/></a>
-                    <nav>
-                        <a href="#">Anos 90</a>
-                        <a href="#">Anos 2000</a>
-                        <a href="#">Marcaram época</a>                       
-                    </nav>
+                        <div class="menu">
+                            <nav>
+                                <a href="#">Anos 90</a>
+                                <a href="#">Anos 2000</a>
+                                <a href="#">Marcaram época</a>                       
+                            </nav>
+                        </div>
                     <div class="clear"></div>
                 </div>
             </header>
@@ -24,12 +26,12 @@
             <main>
                 <div class="serie-principal">
                     <div class="container-serie">
-                        <h3 class="titulo-principal">Game of Thrones</h3>
-                        <p class="descricao-principal">Em uma terra onde os verões podem durar vários anos 
-                        e o inverno toda uma vida, sete nobres famílias lutam pelo controle da mítica terra de Westeros,
-                        dividida depois de uma guerra. Num cenário que lembra a Europa medieval, reis, rainhas, cavaleiros
-                        e renegados usam todos os meios possíveis em um jogo político pela disputa do Trono de Ferro, 
-                        o símbolo do poder absoluto.</p>
+                        <h3 class="titulo-principal">As Aventuras de Jackie Chan</h3>
+                        <p class="descricao-principal">Jackie Chan em uma de suas pesquisas encontra 
+                        um escudo com um talismã e sua vida muda completamente, ele reve seu amigo 
+                        Capitão Black e tem que deter a Mão Negra e proteger os talismãs para não 
+                        reavivar Shendu e com a ajuda de Jade, Tio, Capitão Black e a Sessão 13 para
+                        deter as forças das trevas..</p>
                         
                         <div>   
                             <button role="button" class="botao">
@@ -40,13 +42,77 @@
                                 <i class="fa-solid fa-plus"></i>
                                 MAIS INFORMAÇÕES
                             </button>
-                        </div>
-                   
-                    </div>
-
-                   
+                        </div>                   
+                    </div>                   
                 </div>
+                
+                
+                <section class="vitrine">
+                    <div class="vitrine-flex">
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                                <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                                        <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                            <div class="vitrine-single-banner">
+                                <div class="vitrine-wraper" style="background-image: url('img/20-1.png');"></div>
+                            </div>
+                     </div>
+                   
+                </section>
             </main>
+
+            <script src="/js/jquery.js"></script>
+            <script src="/js/slick.min.js"></script>
+
+            <script>
+                $('.vitrine-flex').slick({
+                    dots:false,
+                    arrows:false,
+                    centerMode:false,
+                    speed:1000,
+                    slidesToShow:6,
+                        autoplay:true,
+                        autoplaySpeed:3000,
+                        paauseOnHover:false,
+                            reponsive:[
+                         {
+                               breakpoint:768,
+                               settings:{
+                               slidesToShow: 3
+                                }
+                         }]
+                });
+
+                $('.vitrine-wraper').hover(function(){
+                    $(this).css('z-index','1000');
+                })
+
+                $('.vitrine-wraper').mouseout(function(){
+                    $(this).css('z-index','0');
+                })
+
+
+            </script>
 
 
         </body>
