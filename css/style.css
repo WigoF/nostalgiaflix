@@ -30,7 +30,7 @@ body{
 }
 
 header{
-    padding: 12px 0;
+    padding: 20px 0;
 }
 
 .container{
@@ -46,6 +46,7 @@ header nav a{
     color:#aaaa;
     margin-left: 30px;
     font-size: 23px;
+    z-index:6
 }
 
 header nav a:hover{
@@ -116,6 +117,18 @@ section.serie-principal{
 
 /*vitrine*/
 
+
+.titulo-vitrine2{
+    font-size:23px ;
+    margin-top:40px;
+    padding: 0 2%;
+}
+
+.titulo-vitrine a{
+    text-decoration: none;
+    color:white;
+}
+
 section.vitrine .vitrine-flex{
 	width: 96%;
 	margin-left: 4%;
@@ -128,6 +141,12 @@ section.vitrine .vitrine-flex{
 	padding-top: calc(16.6% / 2);
 	float:left;
 	position: relative;
+}
+
+.vitrine-single-banner{
+    margin: 2px 4px;
+    cursor: pointer;
+    margin-bottom: 23px;
 }
 
 .vitrine-wraper{
@@ -143,8 +162,16 @@ section.vitrine .vitrine-flex{
 
 .vitrine-wraper:hover{
     transition:1s;
-    transform:scale(1.2,1.2);
+    transform:scale(1.1,1.1);
 }
+
+.titulo-vitrine{
+    font-size:23px ;
+    margin-top:40px;
+    padding: 0 2%;
+}
+
+
 
 @media screen and (max-width:768px){
    .menu{display: none;}
