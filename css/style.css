@@ -54,27 +54,48 @@ header nav a:hover{
 
 /*filme principal*/
 
-.serie-principal{
-    min-height: 500px;
-    width: 100%;    
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%), url('../img/imgfixa.png');
-    background-size: cover;
-    display: flex;
-    padding: 15px;
+section.serie-principal{
+    background-image: url('../img/imgfixa.png');
+    background-size:cover;
+    background-position: center;
+    width:100%;
+    height: 600px;
+    position:relative;
+    z-index:1;
+
     overflow-y: hidden;
-    overflow-x: hidden;
+	overflow-x: hidden;
+	
 }
 
-.titulo-principal{
-    margin-top:8%;    
-    font-size: 60px;
-    margin-bottom: 15px;
+.sombra{
+    z-index: 2;
+    position:absolute;
+    left:0;
+    top:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
 }
 
-.descricao-principal{
+.texto-destaque{
+    color:white;
+    z-index: 3;
+    position: relative;
+    margin-top: 200px;
+    margin-left:4%;
+}
+
+.texto-destaque h2{
+    color:white;
+    font-size:49px;
+    text-transform: uppercase;
+}
+
+.texto-destaque p{
     font-size: 20px;
-    max-width: 60%;
-    margin-bottom: 50px;
+    max-width: 600px;
+    margin-top: 2px;
 }
 
 .botao{
@@ -86,10 +107,6 @@ header nav a:hover{
     padding: 13px;
     cursor:pointer;
     transition: .3% ease all;
-}
-
-.fa-solid{
-    margin: 3px;
 }
 
 .botao:hover{
@@ -109,7 +126,7 @@ section.vitrine .vitrine-flex{
 .vitrine-single-banner{
 	width: 100%;
 	padding-top: calc(16.6% / 2);
-	float: left;
+	float:left;
 	position: relative;
 }
 
@@ -124,9 +141,9 @@ section.vitrine .vitrine-flex{
 	background-position: center;
 }
 
-.vitrine-single-banner:hover{
-    transform:scale(1.2,1.2);
+.vitrine-wraper:hover{
     transition:1s;
+    transform:scale(1.2,1.2);
 }
 
 @media screen and (max-width:768px){
